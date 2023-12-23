@@ -1,6 +1,6 @@
 {
   "name": "etov",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "Error to value. Give an Exception as value by wrapping it to any function.",
   "main": "index.js",
   "types": "index.d.ts",
