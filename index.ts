@@ -1,4 +1,4 @@
-type EtovResponse<T> = [T | null, Error | null];
+export type EtovResponse<T> = [T | null, Error | null];
 
 function isEtovResponse<T>(value: any): value is EtovResponse<T> {
     return Array.isArray(value) && value.length === 2 &&
@@ -41,4 +41,4 @@ function etov<T, Args extends any[]>(func: (...args: Args) => T | Promise<T>, ..
     }
 }
 
-export = etov;
+export default etov;
