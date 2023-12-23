@@ -22,26 +22,26 @@ async function asyncErrorFunction(): Promise<void> {
 
 describe('etov function', () => {
     test('handles synchronous function', () => {
-        const [error, result] = etov(syncFunction, 5, 3);
+        const [result, error] = etov(syncFunction, 5, 3);
         expect(error).toBeNull();
         expect(result).toBe(8);
     });
 
     test('handles asynchronous function', async () => {
-        const [error, result] = await etov(asyncFunction, "Alice");
+        const [result, error] = await etov(asyncFunction, "Alice");
         expect(error).toBeNull();
         expect(result).toBe("Hello, Alice");
     });
 
     test('handles synchronous function with error', () => {
-        const [error, result] = etov(syncErrorFunction);
+        const [result, error] = etov(syncErrorFunction);
         expect(error).toBeInstanceOf(Error);
         expect(error?.message).toBe('Sync error');
         expect(result).toBeNull();
     });
 
     test('handles asynchronous function with error', async () => {
-        const [error, result] = await etov(asyncErrorFunction);
+        const [result, error] = await etov(asyncErrorFunction);
         expect(error).toBeInstanceOf(Error);
         expect(error?.message).toBe('Async error');
         expect(result).toBeNull();
