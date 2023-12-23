@@ -2,6 +2,11 @@
   "name": "etov",
   "version": "1.0.8",
   "description": "Error to value. Give an Exception as value by wrapping it to any function.",
+  "homepage": "https://github.com/genjudev/etov#readme",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/genjudev/etov"
+  },
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "scripts": {
