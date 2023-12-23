@@ -2,12 +2,14 @@
 
 # etov
 
-`etov` (Error to Value) is a TypeScript/JavaScript library designed to streamline error handling by returning errors as values. This package provides a simple and consistent way to handle errors for both synchronous and asynchronous functions, inspired by the error handling approach in Go.
+`etov` (Error to Value) is a TypeScript/JavaScript library designed to streamline error handling by returning errors as values, effectively acting as a wrapper for classical error handling functions. Inspired by the error handling approach in Go, `etov` provides a simple and consistent way to handle errors for both synchronous and asynchronous functions, including integration with 3rd-party libraries.
+
 
 ## Features
 
 - Simple and intuitive error handling
 - Supports both synchronous and asynchronous functions
+- Compatible with 3rd-party libraries.
 - Helps in writing clean and maintainable code
 
 ## Installation
@@ -50,6 +52,19 @@ if (error) {
     console.error(error);
 } else {
     console.log('Result:', result);
+}
+```
+### Using with a 3rd-Party Library
+
+```typescript
+import etov from 'etov';
+import someThirdPartyFunction from 'some-third-party-library';
+
+const [result, error] = etov(someThirdPartyFunction, arg1, arg2);
+if (error) {
+    console.error('An error occurred:', error);
+} else {
+    console.log('Third-party function result:', result);
 }
 ```
 
