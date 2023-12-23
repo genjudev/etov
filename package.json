@@ -1,0 +1,23 @@
+{
+  "name": "etov",
+  "version": "1.0.1",
+  "description": "Error to value. Give an Exception as value by wrapping it to any function.",
+  "main": "index.js",
+  "types": "index.d.ts",
+  "scripts": {
+    "build": "tsc && cp package.json ./dist/ && cp README.md ./dist/",
+    "test": "npx jest"
+  },
+  "keywords": [
+    "errors",
+    "error",
+    "hanlding"
+  ],
+  "author": "genjudev",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/jest": "^29.5.11",
+    "jest": "^29.7.0",
+    "ts-jest": "^29.1.1"
+  }
+}
