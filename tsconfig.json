@@ -5,7 +5,7 @@
     "module": "commonjs",      // Use commonjs module system, as used by Node.js
     "lib": ["es5", "dom"],     // Include type definitions for ES5 and DOM
     "outDir": "./dist",        // Output directory for compiled files
-    "rootDir": "./",        // Root directory of your source files
+    "rootDir": "./",            // Root directory of your source files
     "strict": true,            // Enable all strict type-checking options
     "esModuleInterop": true,   // Enables compatibility with default imports from CommonJS modules
     "forceConsistentCasingInFileNames": true // Ensure case sensitivity in file names
