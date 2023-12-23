@@ -25,4 +25,4 @@ function etov<T, Args extends any[]>(func: (...args: Args) => T | Promise<T>, ..
     }
 }
 
-export default etov;
+export = etov;
