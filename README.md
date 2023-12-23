@@ -28,7 +28,7 @@ function syncFunction(a: number, b: number): number {
     return a + b;
 }
 
-const [error, result] = etov(syncFunction, 5, 3);
+const [result, error] = etov(syncFunction, 5, 3);
 if (error) {
     console.error(error);
 } else {
@@ -45,7 +45,7 @@ async function asyncFunction(name: string): Promise<string> {
     return `Hello, ${name}`;
 }
 
-const [error, result] = await etov(asyncFunction, 'Alice');
+const [result, error] = await etov(asyncFunction, 'Alice');
 if (error) {
     console.error(error);
 } else {
